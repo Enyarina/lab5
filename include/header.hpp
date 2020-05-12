@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 #include <utility>
-//#include "example.cpp"
+
 
 class dog {
 public:
@@ -31,13 +31,11 @@ public:
     explicit stack(T &&value) {
         push(value);
     }
-   // stack(const stack &) = delete;
 
     stack(stack &&a) {
         this->top = a.top;
         a.top = nullptr;
     }
-   // void operator=(const stack &) = delete;
 
     void operator=(stack &&a) {
        // if (this == &&a)
@@ -50,13 +48,6 @@ public:
 
     void clearer() {
         if (top) {
-            /*while (top->prev) {
-                data<T> *tmp = std::move(top->prev);
-                delete (top);
-                top = nullptr;
-                std::cout << "cleared";
-                top = tmp;
-            }*/
             delete (top);
             top = nullptr;
             std::cout << "cleared";
