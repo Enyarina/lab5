@@ -1,3 +1,5 @@
+
+// Copyright 2018 Your Name <your_email>
 #ifndef STACK_HEADER_HPP
 #define STACK_HEADER_HPP
 #include <iostream>
