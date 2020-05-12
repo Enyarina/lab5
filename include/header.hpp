@@ -1,5 +1,5 @@
 // Copyright 2018 Your Name <your_email>
-#ifndef STACK_HEADER_HPP
+INCLUDE_HEADER_HPP_ 
 #define STACK_HEADER_HPP
 #include <iostream>
 #include <string>
@@ -29,7 +29,6 @@ public:
    // void operator=(const stack &) = delete;
 
     void operator=(stack &&a) {
-
        // if (this == &&a)
        // {
          //   return *this;
@@ -93,4 +92,4 @@ public:
     ~stack() { clearer(); }
 };
 
-#endif //STACK_HEADER_HPP
+#endif  // INCLUDE_HEADER_HPP_
