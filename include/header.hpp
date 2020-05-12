@@ -7,7 +7,6 @@
 #include <string>
 #include <utility>
 
-
 class dog {
 public:
     std::string word = "gav";
@@ -94,4 +93,4 @@ public:
     ~stack() { clearer(); }
 };
 
-#endif  // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_HEADER_HPP_
