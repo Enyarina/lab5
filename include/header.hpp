@@ -7,16 +7,6 @@
 #include <string>
 //#include <utility>
 
-class dog {
-public:
-    std::string word = "gav";
-    int i;
-    dog()
-    {}
-    explicit dog(std::string str)
-    {word = str;}
-};
-
 template<typename T>
 struct data {
     T value;
@@ -31,28 +21,39 @@ public:
     explicit stack(T &&value) {
         push(value);
     }
+    stack(const stack &) = delete;
 
     stack(stack &&a) {
         this->top = a.top;
         a.top = nullptr;
     }
+    void operator=(const stack &) = delete;
 
     void operator=(stack &&a) {
-       /* if (this == &&a)
+
+        if (this == &&a)
         {
             return *this;
-        } */
+        }
         this->top = a.top;
         a.top = nullptr;
     }
 
     void clearer() {
         if (top) {
+            while (top->prev) {
+                data<T> *tmp = std::move(top->prev);
+                delete (top);
+                top = nullptr;
+                std::cout << "cleared";
+                top = tmp;
+            }
             delete (top);
             top = nullptr;
             std::cout << "cleared";
         }
     }
+
 
     void push(T &&value) {
         data<T> *tmp;
@@ -92,5 +93,4 @@ public:
 
     ~stack() { clearer(); }
 };
-
 #endif // INCLUDE_HEADER_HPP_
