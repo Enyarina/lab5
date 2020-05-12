@@ -1,10 +1,12 @@
 // Copyright 2018 Your Name <your_email>
-INCLUDE_HEADER_HPP_ 
-#define STACK_HEADER_HPP
+
+#ifndef INCLUDE_HEADER_HPP_
+#define INCLUDE_HEADER_HPP_
+
 #include <iostream>
 #include <string>
 #include <utility>
-#include "example.cpp"
+//#include "example.cpp"
 
 class dog {
 public:
