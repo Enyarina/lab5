@@ -6,6 +6,15 @@ INCLUDE_HEADER_HPP_
 #include <utility>
 #include "example.cpp"
 
+class dog {
+public:
+    std::string word = "gav";
+    int i;
+    dog()
+    {}
+    explicit dog(std::string str)
+    {word = str;}
+};
 template<typename T>
 struct data {
     T value;
