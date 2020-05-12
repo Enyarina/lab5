@@ -30,11 +30,10 @@ public:
     void operator=(const stack &) = delete;
 
     void operator=(stack &&a) {
-
-        if (this == &&a)
+        /*if (this == &&a)
         {
             return *this;
-        }
+        }*/
         this->top = a.top;
         a.top = nullptr;
     }
