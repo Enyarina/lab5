@@ -16,6 +16,7 @@ public:
     explicit dog(std::string str)
     {word = str;}
 };
+
 template<typename T>
 struct data {
     T value;
@@ -37,10 +38,10 @@ public:
     }
 
     void operator=(stack &&a) {
-       // if (this == &&a)
-       // {
-         //   return *this;
-        //}
+       /* if (this == &&a)
+        {
+            return *this;
+        } */
         this->top = a.top;
         a.top = nullptr;
     }
@@ -52,7 +53,6 @@ public:
             std::cout << "cleared";
         }
     }
-
 
     void push(T &&value) {
         data<T> *tmp;
