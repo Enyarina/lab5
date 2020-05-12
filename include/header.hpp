@@ -30,10 +30,10 @@ public:
 
     void operator=(stack &&a) {
 
-        if (this == &&a)
-        {
-            return *this;
-        }
+       // if (this == &&a)
+       // {
+         //   return *this;
+        //}
         this->top = a.top;
         a.top = nullptr;
     }
